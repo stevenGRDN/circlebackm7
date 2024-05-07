@@ -1,0 +1,311 @@
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --val1: '';
+  --val2: '';
+  --val3: '';
+  --val4: '';
+  --val5: '';
+
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  /* overflow-y: hidden; */
+}
+
+/* .site {overflow-x: hidden;} */
+
+html, body{
+  /* position: relative; */
+  /* overflow-x: hidden; */
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  /* background-color: red; */
+  /* position: relative; *//
+}
+
+.container{
+  /* height: calc(100% - 15vh); */
+  /* height: 335vh; */
+  /* height:100vh; */
+  width: 100svw;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.firstPage{
+  position: relative;
+  width:100svw;
+  height:100vh;
+  background-color: #f8f7f7;
+  /* background-color: #fbfbfb; */
+  filter: invert(0) contrast(1);
+  /* overflow-x: hidden; */
+  overflow-y: hidden;
+}
+
+.cBackSVG{
+  position: absolute;
+  left:50%;
+  top: 50%;
+  translate: -51% -50%;
+  /* width:100%; */
+  height:75%;
+  max-height: 75%;
+  max-width: 90%;
+  aspect-ratio: 1;
+}
+
+.CB-Arrow{
+  transform-origin: 50% 45%;
+  rotate: 4deg;
+  animation: anim1 9s cubic-bezier(0.2, 0, 0.1, 1) 0.5s infinite forwards;
+}
+
+
+
+/* In future project, you can add <style> in html
+then create the keyframes, then in JS, you can replace the
+string values of...
+
+Actually we can just select doc.querSel.('style') and do .innerHTML += and add the
+keyframes. Tested it and it works */
+
+
+.secondPage{
+  position: relative;
+  width:100svw;
+  height: auto;
+  /* min-height:115vh; */
+  overflow: hidden;
+  background-color: #f8f7f7;
+  /* translate: 0 -15vh; */
+  /* overflow-x: hidden; */
+  /* pointer-events:; */
+  /* overflow-y: ; */
+
+  /* background-color: #fbfbfb; */
+  /* filter: invert(0) contrast(1); */
+  /* padding-bottom: 200vh; */
+
+  /* translate: 0 -15vh; */
+  margin-top: -15vh;
+  overflow: hidden;
+  /* z-index: 10; */
+}
+
+.random-height{
+  height: 250vh;
+  display: none;
+}
+
+.sp-bg{
+  position: relative;
+  inset: 0;
+  height: 250vh;
+  background-color: #131721;
+  width:100vw;
+  opacity: 0;
+}
+
+.sp-img-1{
+  width:105%;
+  position: absolute;
+  right:0;
+  bottom:0;
+  /* This is the clouds and since they won't be moving
+  too much horizontally we have to move them up */
+  transform: translate(0, -80%);
+}
+
+.sp-img-2,
+.sp-img-3,
+.sp-img-4{
+  width:200%;
+  right:0;
+  position: absolute;  
+  bottom:0;
+}
+
+/* .sp-img-2{
+  top: 102vh;
+}
+
+.sp-img-3{
+  top: 80vh;
+}
+
+.sp-img-4{
+  top: 75vh;
+} */
+
+.sc-1-img{
+  position: absolute;
+  bottom:0;
+  /* outline: 1px solid red; */
+  width:100%;
+  visibility: hidden;
+}
+
+.third-page{
+  height:215vh;
+  overflow-y: auto;
+  background-color: #111;
+}
+
+.loading{
+  background-color: #f8f7f7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: fixed;
+  width:100vw;
+  height:100%;
+  display: grid;
+  place-content: center;
+  font-size: min(10vw, 80vh);
+  font-weight: bolder;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sc-1-img{
+  filter: brightness(1.1) contrast(1.05);
+}
+
+.overlay-sc1{
+  position: fixed;
+  inset: 0;
+  background-color: #111;
+  opacity: 0;
+  pointer-events: none;
+  /* transition: opacity 0.35s ease; */
+}
+
+.fourth-page{
+  height:200vh;
+  min-height: 140vw;
+  /* overflow-y: auto; */
+  background-color: #111;
+  position: relative;
+}
+
+.fp-img-1{
+  position: absolute;
+  width: 28vw;
+  /* aspect-ratio: 1462/1743; */
+  left:2vw;
+  top:25%;
+}
+
+.fp-img-2-div{
+  position: absolute;
+  width: 35vw;
+  aspect-ratio: 1462/1743;
+  left:50%;
+  top:25%;
+  translate: -53.5% 50%;
+  overflow: hidden;
+}
+
+.fp-img-2{
+  position: absolute;
+  width:100%;
+  top:0;
+  left:0;
+  translate: 0 -5%;
+  animation: road ease 10s infinite both;
+
+}
+
+.fp-img-2-overlay{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  /* height:100%; */
+  aspect-ratio: 970/2451;
+  transform: translate(0, -1%);
+  animation: road1 ease 10s infinite both;
+}
+
+.fp-img-2-overlay-img{
+  position: absolute;
+  width:150%;
+  left:50%;
+  top:10%;
+  translate: -50% 0;
+}
+
+.fp-img-3{
+  position: absolute;
+  width: 28vw;
+  /* aspect-ratio: 1462/1743; */
+  right:4vw;
+  top:25%;
+  translate: 0 160%;
+}
+
+.circleBackReload{
+  position: absolute;
+  left:50%;
+  top: calc(80vh + 70vw);
+  translate: -50% 0%;
+  width: 15vw;
+  mix-blend-mode: lighten;
+}
+
+.fp-img-4{
+  width:100%;
+  filter: invert(1);
+}
+
+@keyframes road {
+  0%{
+    translate: 0 -5%;
+  }
+  
+  25%{
+    translate: 0 -8%;
+  }
+  50%{
+    translate: 0 -2%;
+  }
+  75%{
+    translate: 0 0%;
+  }
+  100%{
+    translate: 0 -5%;
+  }
+}
+
+@keyframes road1 {
+  0%{
+    translate: 0 -8%;
+  }
+  
+  25%{
+    translate: 0 -12%;
+  }
+  50%{
+    translate: 0 0%;
+  }
+  75%{
+    translate: 0 3%;
+  }
+  100%{
+    translate: 0 -8%;
+  }
+}
